@@ -99,26 +99,35 @@ const Queue = () => {
           {openModal && (
             <>
               <Dialog open={open} handler={handleOpen}>
-                <DialogHeader>Its a simple dialog.</DialogHeader>
+                <DialogHeader>
+                  <h2 className='text-center w-full'>waiting in line</h2>
+                </DialogHeader>
                 <DialogBody>
-                  The key to more success is to have a lot of pillows. Put it
-                  this way, it took me twenty five years to get these plants,
-                  twenty five years of blood sweat and tears, and I&apos;m never
-                  giving up, I&apos;m just getting started. I&apos;m up to
-                  something. Fan luv.
+                  <div className='text-center'>
+                      
+                       <p className='py-4' >10</p>
+                       <p className='py-4'>estimated waiting time</p>
+                       <p className='py-4'>00:12:00</p>  
+                       
+                  </div>
                 </DialogBody>
                 <DialogFooter>
+                  <div className=' flex justify-center w-full text-center '>
+
+                  <Button className='mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                    <span>BOOK</span>
+                  </Button>
+
                   <Button
                     variant='text'
                     color='red'
                     onClick={handleOpen}
                     className='mr-1'
                   >
-                    <span>Cancel</span>
+                    <span>CANCEL</span>
                   </Button>
-                  <Button variant='gradient' color='green' onClick={handleOpen}>
-                    <span>Confirm</span>
-                  </Button>
+                 
+                  </div>
                 </DialogFooter>
               </Dialog>
             </>
