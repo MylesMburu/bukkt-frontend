@@ -6,6 +6,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  --primary-color: #c4885a;
+  --secondary-color: #f9f9f9;
+  --tertiary-color: #1a202c;
+  --dark-blue: #061426;
 }
 
 a {
@@ -20,4 +25,192 @@ a:hover {
 
 body {
   margin: 0;
+}
+
+
+
+/* why choose us styles */
+.svg-card {
+  position: relative;
+  
+}
+.svg-card::after {
+  content: '';
+  position: absolute;
+  width: calc(250px - 0px);
+  height: 4px;
+  background-color: var(--primary-color);
+  z-index: 1;
+  left: 0;
+  top: 50%;
+}
+
+.svg-card::before {
+  content: '';
+  position: absolute;
+  width: calc(250px - 0px);
+  height: 4px;
+  background-color: var(--primary-color);
+  z-index: 1;
+  right: 0;
+  top: 50%;
+}
+
+.journey-card-container .child-card:nth-child(4) .svg-card::after {
+  width: calc(250px / 2);
+}
+
+.journey-card-container .child-card:nth-child(4) .svg-card::before {
+  height: calc(250px - (100% + 50px));
+  width: 4px;
+  right: -69px;
+}
+
+.journey-card-container .child-card:nth-child(8) .svg-card::after {
+  width: calc(250px / 2);
+}
+
+.journey-card-container .child-card:nth-child(5) .svg-card::after {
+  width: 69px;
+  transform: translateX(-100%);
+}
+.journey-card-container .child-card:nth-child(5) .svg-card::before {
+  height: calc(250px - (100% + 50px));
+  width: 4px;
+  left: -69px;
+}
+
+.journey-card-container .child-card:nth-child(9) .svg-card::before {
+  left: -69px;
+}
+
+.journey-card-container .child-card:last-child .svg-card::after,
+.journey-card-container .child-card:first-child .svg-card::before {
+  width: calc(250px / 2);
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+  .journey-card-container .child-card:nth-child(4) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    right: -69px;
+  }
+  .journey-card-container .child-card:nth-child(5) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    left: -69px;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-card-container .child-card:nth-child(4) .svg-card::before {
+    height: 4px;
+    width: calc(250px / 2);
+    right: 0;
+  }
+  .journey-card-container .child-card:nth-child(5) .svg-card::before {
+    height: 4px;
+    width: calc(250px);
+    left: 0;
+  }
+
+  .journey-card-container .child-card:nth-child(2) .svg-card::after,
+  .journey-card-container .child-card:nth-child(6) .svg-card::after,
+  .journey-card-container .child-card:nth-child(8) .svg-card::after,
+  .journey-card-container .child-card:nth-child(10) .svg-card::after {
+    width: calc(250px / 2);
+  }
+  .journey-card-container .child-card:nth-child(2) .svg-card::before,
+  .journey-card-container .child-card:nth-child(6) .svg-card::before,
+  .journey-card-container .child-card:nth-child(10) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    right: -69px;
+  }
+  .journey-card-container .child-card:nth-child(3) .svg-card::after,
+  .journey-card-container .child-card:nth-child(7) .svg-card::after {
+    left: -69px;
+  }
+  .journey-card-container .child-card:nth-child(3) .svg-card::before,
+  .journey-card-container .child-card:nth-child(7) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    left: -69px;
+  }
+  .journey-card-container .child-card:nth-child(11) .svg-card::after {
+    width: calc(250px + 69px + 100%);
+  }
+  .journey-card-container .child-card:nth-child(11) .svg-card::before {
+    left: -69px;
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-card-container .child-card:first-child .svg-card::before {
+    width: calc(250px - 56px);
+    left: -69px;
+  }
+  .journey-card-container .child-card:first-child .svg-card::after {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    left: -69px;
+  }
+  /* firstchild */
+  .journey-card-container .child-card:nth-child(6) .svg-card::after,
+  /* .journey-card-container .child-card:nth-child(8) .svg-card::after, */
+  .journey-card-container
+    .child-card:nth-child(4)
+    .svg-card::after
+    .journey-card-container
+    .child-card:nth-child(10)
+    .svg-card::after {
+    width: calc(250px - 100%);
+    left: -69px;
+  }
+  .journey-card-container .child-card:nth-child(2) .svg-card::after,
+  .journey-card-container .child-card:nth-child(4) .svg-card::after,
+  .journey-card-container .child-card:nth-child(6) .svg-card::after,
+  .journey-card-container .child-card:nth-child(8) .svg-card::after,
+  .journey-card-container .child-card:nth-child(10) .svg-card::after {
+    width: calc(250px - 56px);
+    left: -69px;
+  }
+
+  .journey-card-container .child-card:nth-child(2) .svg-card::before,
+  .journey-card-container .child-card:nth-child(4) .svg-card::before,
+  .journey-card-container .child-card:nth-child(6) .svg-card::before,
+  .journey-card-container .child-card:nth-child(8) .svg-card::before,
+  .journey-card-container .child-card:nth-child(10) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    right: -69px;
+  }
+
+  .journey-card-container .child-card:nth-child(3) .svg-card::after,
+  .journey-card-container .child-card:nth-child(9) .svg-card::after,
+  .journey-card-container .child-card:nth-child(7) .svg-card::after {
+    width: calc(250px - 100%);
+    left: -69px;
+  }
+
+  .journey-card-container .child-card:nth-child(3) .svg-card::before,
+  .journey-card-container .child-card:nth-child(9) .svg-card::before,
+  .journey-card-container .child-card:nth-child(5) .svg-card::before {
+    height: calc(250px - (100% + 50px));
+    width: 4px;
+    left: -69px;
+  }
+  .journey-card-container .child-card:nth-child(5) .svg-card::after {
+    width: calc(250px - 56px);
+    left: calc(250px / 2);
+  }
+
+  .journey-card-container .child-card:nth-child(11) .svg-card::after {
+    width: calc(250px / 2);
+  }
+  .journey-card-container .child-card:nth-child(11) .svg-card::before {
+    width: calc(250px / 2);
+  }
 }

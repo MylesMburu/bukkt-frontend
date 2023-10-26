@@ -1,6 +1,9 @@
-import Services from "./servicekpage/serviceslayout"
+import WhyChooseUs from "./WhyChooseUs"
+
 const Homepage = () => {
-    return <div><Services/></div>
+    return <div>
+        <WhyChooseUs />
+    </div>
 }
 
 export default Homepage
