@@ -1,6 +1,7 @@
 import Homepage from '../components/Homepage'
 import Layout from '../components/Layout'
 import Queue from '../components/Queue'
+import ContactUs from '../components/contact/contactUs'
 import Services from '../components/servicekpage/serviceslayout'
 
 export const routesConfig = [
@@ -17,6 +18,10 @@ export const routesConfig = [
         path: '/services',
         element: <Services />,
       },
+      {
+        path: '/contact',
+        element: <ContactUs />
+      }
     ],
   },
 ]
