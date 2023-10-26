@@ -1,3 +1,4 @@
+import Nav from "./Nav"
 import PropTypes from 'prop-types'
 import { Outlet } from 'react-router-dom'
 
@@ -7,7 +8,7 @@ const Layout = () => {
       <header>
         <nav>
           {/* Navigation links */}
-          Navbar component
+          <Nav />
         </nav>
       </header>
       <main>
