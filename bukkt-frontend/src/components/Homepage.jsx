@@ -1,5 +1,9 @@
+import WhyChooseUs from "./WhyChooseUs"
+
 const Homepage = () => {
-    return <div>Homepage</div>
+    return <div>
+        <WhyChooseUs />
+    </div>
 }
 
 export default Homepage
