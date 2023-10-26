@@ -12,6 +12,10 @@ export const routesConfig = [
         path: '/queue',
         element: <Queue />,
       },
+      {
+        path: '/services',
+        element: <Queue />,
+      }
     ],
   },
 ]
